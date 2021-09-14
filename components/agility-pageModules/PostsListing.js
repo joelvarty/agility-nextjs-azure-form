@@ -34,9 +34,8 @@ const PostsListing = ({ module, customData }) => {
 
 	return (
 		<div className="relative px-8 mb-12">
-			<div className="max-w-screen-xl ">
-				<div className="relative flex-1 px-2 flex  ">
-
+			<div className="max-w-screen-xl mx-auto">
+				<div className="relative flex-1 px-2 ">
 					<div className="w-full max-w-xs lg:max-w-xl">
 						<label htmlFor="search" className="sr-only">
 							Search
@@ -49,6 +48,7 @@ const PostsListing = ({ module, customData }) => {
 						</div>
 					</div>
 				</div>
+
 
 				<div className="mt-8 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
