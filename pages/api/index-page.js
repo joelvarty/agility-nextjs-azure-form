@@ -32,10 +32,6 @@ export default async (req, res) => {
 			// any other requestOptions
 		  })
 
-		console.log(item)
-
-
-		console.log(hookItem)
 
 
 	}

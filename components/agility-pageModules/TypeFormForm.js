@@ -23,7 +23,7 @@ const TypeFormForm = ({ module: {fields} }) => {
 	const buttonText = fields.buttonText || "Start"
 
 
-	if (formType === "embed" && 1 === 2) {
+	if (formType === "embed") {
 		return <Widget id={formID} style={{ width: '100%', height: height }} className="" />
 	} else {
 		return (
