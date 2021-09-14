@@ -9,7 +9,7 @@ import SiteFooter from "./SiteFooter";
 import LoadingWidget from "./LoadingWidget";
 
 // set up handle preview
-const isPreview = handlePreview();
+const isPreview = handlePreview({ });
 
 function Layout(props) {
   const {
