@@ -24,8 +24,11 @@ export default async (req, res) => {
 		const client = algoliasearch('NAAQKH78HP', 'fd212c07de49a06abe5921fd53a205e9');
 		const index = client.initIndex('agility-forms-acount');
 
+		item.objectID = item.contentID
+
 		index.saveObject(item, {
-			autoGenerateObjectIDIfNotExist: true
+
+
 			// any other requestOptions
 		  })
 
