@@ -20,6 +20,8 @@ const SEO = ({ title, description, keywords, ogImage, metaHTML }) => {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
         rel="stylesheet"
       />
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossOrigin="anonymous" />
+
       {ogImage && <meta property="og:image" content={ogImage} />}
       {additionalHeaderMarkup}
     </Head>
