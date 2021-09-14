@@ -9,9 +9,10 @@
     "build": "next build",
     "export": "next export",
     "postbuild": "agility-next postbuild",
-    "start": "next start",
+    "start": "next start  -p $PORT",
     "cms-pull": "agility-next sync",
-    "cms-clean": "agility-next clean"
+    "cms-clean": "agility-next clean",
+    "postinstall": "agility-next prebuild && next build"
   },
   "dependencies": {
     "next": "^11.0.1",
