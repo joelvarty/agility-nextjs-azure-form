@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.4.0",
+    "@heroicons/react": "^1.0.4",
     "@typeform/embed": "^1.18.1",
     "@typeform/embed-react": "^1.1.1",
     "algoliasearch": "^4.10.5",

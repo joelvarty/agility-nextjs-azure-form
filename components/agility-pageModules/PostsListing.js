@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { AgilityImage } from "@agility/nextjs"
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
-import algoliasearch from 'algoliasearch/lite';
-import { getAlgoliaResults } from '@algolia/autocomplete-js';
-import { Autocomplete } from 'components/common/Autocomplete';
-import { SearchItem } from "components/common/SearchItem";
 
-const searchClient = algoliasearch('NAAQKH78HP', '11ededb0eaf3bcbd79331486e381b798');
+
+import { Autocomplete } from 'components/common/Autocomplete';
+import { SearchIcon } from '@heroicons/react/solid'
+
+
 
 const PostsListing = ({ module, customData }) => {
 	// get posts
@@ -35,39 +34,23 @@ const PostsListing = ({ module, customData }) => {
 
 	return (
 		<div className="relative px-8 mb-12">
-			<div className="max-w-screen-xl mx-auto">
+			<div className="max-w-screen-xl ">
+				<div className="relative flex-1 px-2 flex  ">
 
-				<div className="py-2">
-					<Autocomplete
-						openOnFocus={true}
-						getSources={({ query }) => [
-							{
-								sourceId: 'products',
-								getItems() {
-									return getAlgoliaResults({
-										searchClient,
-										queries: [
-											{
-												indexName: 'agility-forms-acount',
-												query,
-											},
-										],
-									});
-								},
-								templates: {
-									item({ item, components }) {
-										console.log("TEMPLATE", item)
-										return <SearchItem hit={item} components={components} />;
-									},
-								},
-							},
-						]}
-					/>
+					<div className="w-full max-w-xs lg:max-w-xl">
+						<label htmlFor="search" className="sr-only">
+							Search
+						</label>
+						<div className="relative">
+							<div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+								<SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+							</div>
+							<Autocomplete />
+						</div>
+					</div>
 				</div>
 
-				<div className="sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-
+				<div className="mt-8 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
 
 					{posts.map((post, index) => (
