@@ -13,9 +13,15 @@ export async function getServerSideProps(context) {
 		locale,
 		defaultLocale,
 		locales,
-		req
+		req,
+		res
 	} = context
 
+
+	// TODO: set the cache=control header
+	//if we are NOT in preview mode, use stale while revalidate
+	//if we ARE in preview mode, do NOT allow caching...
+	//res.header["cache-control"] = ...
 
 	const { getAgilityPageProps } = require("@agility/nextjs/node")
 

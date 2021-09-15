@@ -3,6 +3,7 @@ import algoliasearch from 'algoliasearch'
 
 export default async (req, res) => {
 
+//TODO: handle deletes
 
 	const hookItem = req.body
 
@@ -25,6 +26,7 @@ export default async (req, res) => {
 		const index = client.initIndex('agility-forms-acount');
 
 		item.objectID = item.contentID
+
 
 		index.saveObject(item, {
 
